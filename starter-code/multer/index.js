@@ -14,7 +14,8 @@ const storage =  cloudinaryStorage({
   folder: 'tumblr-lab-file',
   allowedFormats: ['jpg', 'png'],
   filename: function (req, file, cb) {
-    cb(undefined, 'my-file-name');
+    let imgName = undefined;
+    cb(undefined, imgName);
   }
 });
 

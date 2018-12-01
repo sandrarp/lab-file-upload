@@ -80,6 +80,9 @@ passport.use('local-signup', new LocalStrategy(
                   email,
                   password: hashPass
                 });
+                if(req.file !== undefined) {
+                  newUser.profileImg = req.file.url;
+                }
 
                 newUser.save((err) => {
                     if (err){ next(null, false, { message: newUser.errors }) }
