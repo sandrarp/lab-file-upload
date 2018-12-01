@@ -8,6 +8,17 @@
   </head>
   <body>
     <div class="main-container">
+      <nav class="navbar"><ul>
+        <li>
+          <a href="/">Home</a>
+          {{#unless user}}
+          <a href="/login">Login</a>
+          <a href="/signup">Sign up</a>
+          {{/unless}}
+          <a href="/profile">Profile</a>
+          <a href="/logout">Log out</a>
+        </li>
+      </ul></nav>
       {{{body}}}
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
